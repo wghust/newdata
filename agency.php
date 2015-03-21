@@ -136,8 +136,8 @@
         myChart.setOption(option);
         myChart.on(echarts.config.EVENT.CLICK,function(param){
         	var name = param.name;
-        	// name = name.replace(/\s+/g,"_");
-        	// window.open('/get/oneAgency/'+name+'/investment/all');
+        	name = name.replace(/\s+/g,"_");
+        	window.open('./allinvestment.php?agencyname='+name);
         });
 	});
 	</script>

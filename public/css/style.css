@@ -4,6 +4,9 @@ body {
 	background-color: #F2F2F2;
 	font-family: 'Verdana'
 }
+.clear {
+	clear: both;
+}
 .container {
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -51,5 +54,9 @@ body {
 .btn_group {
 	padding-top: 10px;
 	padding-bottom: 20px;
+}
+.investbtn {
+	float: left;
+	margin-bottom: 10px;
 }
 
