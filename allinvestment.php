@@ -41,7 +41,7 @@
 			<div class="block_top">
 				<span>Investment Titles</span>
 			</div>
-			<div class="block_con">
+			<div class="block_con" style="max-height:300px;overflow-y:scroll">
 				<div class="btn_group">
 					<?php
 					for($s=0;$s<count($investments);$s++) {

@@ -37,6 +37,7 @@ body {
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 .lcon .block_top {
 	padding: 10px 15px;
@@ -47,6 +48,7 @@ body {
 }
 .lcon .block_con {
 	padding: 10px 15px;
+	/*margin-bottom: 20px;*/
 }
 .lcon .block_con .showDes {
 	line-height: 24px;

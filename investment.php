@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	151532.9255	-36.13414634	-35.88518293	3.613734104	3.191707317	14154.89814	82.69662038
 	<meta charset="utf-8">
 	<title>One Investment</title>
 	<link rel="stylesheet" type="text/css" href="./public/css/style.css">
@@ -82,7 +83,7 @@
 			<div class="block_top">
 				<span>Investment Titles</span>
 			</div>
-			<div class="block_con">
+			<div class="block_con" style="max-height:300px;overflow-y:scroll">
 				<div class="btn_group">
 					<?php
 					for($s=0;$s<count($investments);$s++) {

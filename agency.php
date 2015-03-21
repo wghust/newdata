@@ -85,7 +85,7 @@
 			</div>
 			<div class="block_con">
 				<div class="showDes">
-					&nbsp;&nbsp;&nbsp;&nbsp;This website displays the expenditures US government controls to each agency and compares the shares among those agencies. Besides, it details the investments each agency implements and shows each investment’s expenditures and time consumed. Users can choose the plan cost and actual cost to select which pie chart they want to see. When users focus on one agency, they can click the corresponding part on the pie chart to get more details. After clicking that, they can see a new page where they can select investment titles from the drop-down box. These webpages mainly focuses on helping government to know which agency they need pay more attention to and how much they need to pay for each agency. That also can give better understanding to citizens that what their government think highly of.
+					&nbsp;&nbsp;&nbsp;&nbsp;This website displays the expenditures US government controls to each agency and compares the shares among those agencies. Besides, it details the investments each agency implements and shows each investment’s expenditures and time consumed. Users can choose the planned cost and actual cost to select which pie chart they want to see. When users focus on one agency, they can click the corresponding part on the pie chart to get more details. After clicking that, they can see a new page where they can select investment titles from the list. After selecting investment, the cost and time consumed of all the projects will be shown. These webpages mainly focuses on helping government to know which agency they need pay more attention to and how much they need to pay for each agency, as well as each project take how long to complete. That also can give better understanding to citizens that what their government think highly of.
 				</div>
 			</div>
 		</div>
@@ -95,7 +95,7 @@
 			</div>
 			<div class="block_con">
 				<div class="btn_group">
-					<a href="./agency.php?type=2" class="abtn">PLAN COST</a><a href="./agency.php?type=1" class="abtn">ACTUAL COST</a>
+					<a href="./agency.php?type=2" class="abtn">PLANED COST</a><a href="./agency.php?type=1" class="abtn">ACTUAL COST</a>
 					<div class="clear"></div>
 				</div>
 			</div>
