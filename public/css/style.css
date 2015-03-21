@@ -1,0 +1,55 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #F2F2F2;
+	font-family: 'Verdana'
+}
+.container {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.abtn {
+	border: 1px solid #D8D8D8;
+	color: black;
+	border-radius: 20px;
+	padding: 3px 10px;
+	font-size: 12px;
+	text-decoration: none;
+	margin-right: 10px;
+	transition: all 0.25s ease 0;
+	-webkit-transition: all 0.25s ease 0;
+	-moz-transition: all 0.25s ease 0;
+}
+.abtn:hover {
+	background-color: #50E3C2;
+	border: 1px solid #50E3C2;
+	color: white;
+}
+.lcon {
+	position: relative;
+	width: 1024px;
+	background-color: white;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.lcon .block_top {
+	padding: 10px 15px;
+}
+.lcon .block_top span {
+	border-bottom: 1px solid #f2f2f2;
+	font-size: 18px;
+}
+.lcon .block_con {
+	padding: 10px 15px;
+}
+.lcon .block_con .showDes {
+	line-height: 24px;
+}
+.btn_group {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
