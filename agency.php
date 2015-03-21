@@ -7,7 +7,7 @@
 </head>
 <body>
 	<?php
-		$filename = "./public/data/data.json";
+		$filename = "./public/data/newdata.json";
 		$json_string = file_get_contents($filename);
 		$obj = json_decode($json_string,true);
 		$obj_len = count($obj);
@@ -16,7 +16,7 @@
 			$isHere = false;
 			$isHereId = 0;
 			for($j=0;$j<count($agency);$j++) {
-				if($obj[$i]['Agency_Code']==$agency[$j]['Agency_Code']) {
+				if($obj[$i]['Agency_Code']==(int)($agency[$j]['Agency_Code'])) {
 					$isHere = true;
 					$isHereId = $j;
 					break;
@@ -24,20 +24,25 @@
 			}
 			if(!$isHere) {
 				$thisarray = array(
-						'Agency_Code'=>$obj[$i]['Agency_Code'],
+						'Agency_Code'=>(int)($obj[$i]['Agency_Code']),
 						'Agency_Name'=>$obj[$i]['Agency_Name'],
-						'Plan_Cost'=>number_format($obj[$i]['Planned_Cost_m'],2),
-						'Actual_Cost'=>number_format($obj[$i]['Projected_Actual_Cost'],2)
+						'Plan_Cost'=>number_format($obj[$i]['Planned_Cost_m'],3,'.',''),
+						'Actual_Cost'=>number_format($obj[$i]['Projected_Actual_Cost'],3,'.','')
 						);
 				array_push($agency,$thisarray);
 			} else {
-				$agency[$isHereId]['Plan_Cost'] += number_format($obj[$isHereId]['Planned_Cost_m'],2);
-				$agency[$isHereId]['Actual_Cost'] += number_format($obj[$isHereId]['Projected_Actual_Cost'],2);
+				$agency[$isHereId]['Plan_Cost'] += number_format($obj[$i]['Planned_Cost_m'],3,'.', '');
+				$agency[$isHereId]['Actual_Cost'] += number_format($obj[$i]['Projected_Actual_Cost'],3,'.', '');
+				// echo $agency[$isHereId]['Agency_Name'].":". number_format($obj[$i]['Projected_Actual_Cost'],3,'.', '').":".$agency[$isHereId]['Actual_Cost']."<br>";
 			}
 		}
+		// for($r=0;$r<count($agency);$r++) {
+		// 	echo $agency[$r]['Agency_Name'].":".$agency[$r]['Actual_Cost']."<br>";
+		// }
 
 		$charttitle = 'Actual Cost';
 		$type = $_GET['type'];
+		$precent = "50%";
 		if($type == 1) {
 			// echo count($agency);
 			$charttitle = "Actual Cost";
@@ -52,6 +57,7 @@
 					$data_show = $data_show.",{value:".$agency[$k]['Actual_Cost'].",name:'".$agency[$k]['Agency_Name']."'}";
 				}
 			}
+			$precent = "60%";
 		} else {
 			if($type == 2) {
 				$charttitle = 'PLAN COST';
@@ -67,6 +73,7 @@
 					}
 				}
 			}
+			$precent = "70%";
 		}
 		// print_r($agency);
 		// print_r($obj);
@@ -126,7 +133,7 @@
 		            name:'Agency',
 		            type:'pie',
 		            radius : '55%',
-		            center: ['50%', '50%'],
+		            center: ['50%', '<?php echo $precent;?>'],
 		            data:[
 		               	<?php echo $data_show;?>
 		            ]
