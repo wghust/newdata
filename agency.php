@@ -95,7 +95,7 @@
 			</div>
 			<div class="block_con">
 				<div class="btn_group">
-					<a href="./agency.php?type=2" class="abtn">PLANED COST</a><a href="./agency.php?type=1" class="abtn">ACTUAL COST</a>
+					<a href="./agency.php?type=2" class="abtn">PLANNED COST</a><a href="./agency.php?type=1" class="abtn">ACTUAL COST</a>
 					<div class="clear"></div>
 				</div>
 			</div>
